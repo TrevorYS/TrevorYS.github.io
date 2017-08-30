@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+<html lang="">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Tracy&#39;s Blog">
+    <title>iOS-Skill - Tracy&#39;s Blog</title>
+    <meta name="author" content="Tracy">
+    
+    
+    
+    <meta name="description" content="#####iOS开发过程中一些小问题小技巧，代码片段。  利用Safari打开一个链接 12NSURL *url = [NSURL URLWithString:@&quot;http://baidu.com&quot;];[[UIApplication sharedApplication] openURL:url];">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="iOS-Skill">
+<meta property="og:url" content="http://yoursite.com/2017/08/30/iOS-Skill/index.html">
+<meta property="og:site_name" content="Tracy&#39;s Blog">
+<meta property="og:description" content="#####iOS开发过程中一些小问题小技巧，代码片段。  利用Safari打开一个链接 12NSURL *url = [NSURL URLWithString:@&quot;http://baidu.com&quot;];[[UIApplication sharedApplication] openURL:url];">
+<meta property="og:updated_time" content="2017-08-30T02:20:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS-Skill">
+<meta name="twitter:description" content="#####iOS开发过程中一些小问题小技巧，代码片段。  利用Safari打开一个链接 12NSURL *url = [NSURL URLWithString:@&quot;http://baidu.com&quot;];[[UIApplication sharedApplication] openURL:url];">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="http://yoursite.com/assets/images/WechatIMG1.jpeg"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-sxklfps8ywgfyyjcowvnb4gxdgt0zjts3hsguljmv9uqanxjbnitrovtbrek.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">Tracy&#39;s Blog</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/WechatIMG1.jpeg" alt="Bild des Autors"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/WechatIMG1.jpeg" alt="Bild des Autors"/>
+                </a>
+                <h4 class="sidebar-profile-name">Tracy</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">Kategorien</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/TracyYanghandsome" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="http://weibo.com/2188048564/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-weibo"></i>
+                        <span class="sidebar-button-desc">Weibo</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            iOS-Skill
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2017-08-30T09:52:58+08:00">
+	
+		    30 Aug 2017
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/技术/">技术</a>
+
+
+    
+</div>
+
+    
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>#####iOS开发过程中一些小问题小技巧，代码片段。</p>
+<blockquote>
+<p>利用Safari打开一个链接</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://baidu.com"</span>];</div><div class="line">[[<span class="built_in">UIApplication</span> sharedApplication] openURL:url];</div></pre></td></tr></table></figure>
+</blockquote>
+<a id="more"></a>
+<blockquote>
+<p>汉字转码</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *oriString = <span class="string">@"\u67aa\u738b"</span>;</div><div class="line"><span class="built_in">NSString</span> *escapedString = [oriString stringByReplacingPercentEscapesUsingEncoding:<span class="built_in">NSUTF8StringEncoding</span>];</div></pre></td></tr></table></figure>
+<p>调用电话，短信，邮件</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[[<span class="built_in">UIApplication</span> sharedApplication] openURL:[<span class="built_in">NSURL</span> URLWithString:<span class="string">@"mailto:apple@mac.com?Subject=hello"</span>]];</div><div class="line">sms:<span class="comment">//调用短信</span></div><div class="line">tel:<span class="comment">//调用电话</span></div><div class="line">itms:<span class="comment">//打开MobileStore.app</span></div></pre></td></tr></table></figure>
+<p>获取版本信息</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">UIDevice</span> *myDevice = [<span class="built_in">UIDevice</span> currentDevice];</div><div class="line"><span class="built_in">NSString</span> *systemVersion = myDevice.systemVersion;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
+<p>iPhone 更改键盘右下角按键的 type</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SearchBar *mySearchBar = [[<span class="built_in">UISearchBar</span> alloc]init];</div><div class="line">mySearchBar.frame = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="keyword">self</span>.view.bounds.size.width, <span class="number">44</span>);</div><div class="line">mySearchBar.placeholder = <span class="string">@"placeholderString"</span>;</div><div class="line">mySearchBar.delegate = <span class="keyword">self</span>;</div><div class="line">[<span class="keyword">self</span>.view addSubview:mySearchBar];</div><div class="line"><span class="built_in">UITextField</span> *searchField = [[mySearchBar subviews] lastObject];</div><div class="line">searchField.returnKeyType = <span class="built_in">UIReturnKeyDone</span>;</div></pre></td></tr></table></figure>
+<p>给图片增加模糊效果</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//加模糊效果，image是图片，blur是模糊度</span></div><div class="line">+ (<span class="built_in">UIImage</span> *)blurryImage:(<span class="built_in">UIImage</span> *)image withBlurLevel:(<span class="built_in">CGFloat</span>)blur &#123;</div><div class="line">    <span class="comment">//模糊度,</span></div><div class="line">    <span class="keyword">if</span> ((blur &lt; <span class="number">0.1</span>f) || (blur &gt; <span class="number">2.0</span>f)) &#123;</div><div class="line">        blur = <span class="number">0.1</span>f;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//boxSize必须大于0</span></div><div class="line">    <span class="keyword">int</span> boxSize = (<span class="keyword">int</span>)(blur * <span class="number">100</span>);</div><div class="line">    boxSize -= (boxSize % <span class="number">2</span>) + <span class="number">1</span>;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"boxSize:%i"</span>,boxSize);</div><div class="line">    <span class="comment">//图像处理</span></div><div class="line">    <span class="built_in">CGImageRef</span> img = image.CGImage;</div><div class="line">&gt;</div><div class="line">    <span class="comment">//图像缓存,输入缓存，输出缓存</span></div><div class="line">    vImage_Buffer inBuffer, outBuffer;</div><div class="line">    vImage_Error error;</div><div class="line">    <span class="comment">//像素缓存</span></div><div class="line">    <span class="keyword">void</span> *pixelBuffer;</div><div class="line">&gt;</div><div class="line">	<span class="comment">//数据源提供者，Defines an opaque type that supplies 	Quartz with data.</span></div><div class="line">   <span class="built_in">CGDataProviderRef</span> inProvider = <span class="built_in">CGImageGetDataProvider</span>(img);</div><div class="line">    <span class="comment">// provider’s data.</span></div><div class="line">    <span class="built_in">CFDataRef</span> inBitmapData = <span class="built_in">CGDataProviderCopyData</span>(inProvider);</div><div class="line">&gt;</div><div class="line">	 <span class="comment">//宽，高，字节/行，data</span></div><div class="line">    inBuffer.width = <span class="built_in">CGImageGetWidth</span>(img);</div><div class="line">    inBuffer.height = <span class="built_in">CGImageGetHeight</span>(img);</div><div class="line">    inBuffer.rowBytes = <span class="built_in">CGImageGetBytesPerRow</span>(img);</div><div class="line">    inBuffer.data = (<span class="keyword">void</span>*)<span class="built_in">CFDataGetBytePtr</span>(inBitmapData);</div><div class="line">&gt;</div><div class="line">	 <span class="comment">//像数缓存，字节行*图片高</span></div><div class="line">    pixelBuffer = malloc(<span class="built_in">CGImageGetBytesPerRow</span>(img) * <span class="built_in">CGImageGetHeight</span>(img));</div><div class="line">&gt;</div><div class="line">    outBuffer.data = pixelBuffer;</div><div class="line">    outBuffer.width = <span class="built_in">CGImageGetWidth</span>(img);</div><div class="line">    outBuffer.height = <span class="built_in">CGImageGetHeight</span>(img);</div><div class="line">    outBuffer.rowBytes = <span class="built_in">CGImageGetBytesPerRow</span>(img);</div><div class="line">&gt;</div><div class="line">    <span class="comment">// 第三个中间的缓存区,抗锯齿的效果</span></div><div class="line">    <span class="keyword">void</span> *pixelBuffer2 = malloc(<span class="built_in">CGImageGetBytesPerRow</span>(img) * <span class="built_in">CGImageGetHeight</span>(img));</div><div class="line">    vImage_Buffer outBuffer2;</div><div class="line">    outBuffer2.data = pixelBuffer2;</div><div class="line">    outBuffer2.width = <span class="built_in">CGImageGetWidth</span>(img);</div><div class="line">    outBuffer2.height = <span class="built_in">CGImageGetHeight</span>(img);</div><div class="line">    outBuffer2.rowBytes = <span class="built_in">CGImageGetBytesPerRow</span>(img);</div><div class="line">&gt;</div><div class="line">    <span class="comment">//Convolves a region of interest within an ARGB8888 source image by an implicit M x N kernel that has the effect of a box filter.</span></div><div class="line">    error = vImageBoxConvolve_ARGB8888(&amp;inBuffer;, &amp;outBuffer2;, <span class="literal">NULL</span>, <span class="number">0</span>, <span class="number">0</span>, boxSize, boxSize, <span class="literal">NULL</span>, kvImageEdgeExtend);</div><div class="line">    error = vImageBoxConvolve_ARGB8888(&amp;outBuffer2;, &amp;inBuffer;, <span class="literal">NULL</span>, <span class="number">0</span>, <span class="number">0</span>, boxSize, boxSize, <span class="literal">NULL</span>, kvImageEdgeExtend);</div><div class="line">    error = vImageBoxConvolve_ARGB8888(&amp;inBuffer;, &amp;outBuffer;, <span class="literal">NULL</span>, <span class="number">0</span>, <span class="number">0</span>, boxSize, boxSize, <span class="literal">NULL</span>, kvImageEdgeExtend);</div><div class="line">&gt;</div><div class="line">    <span class="keyword">if</span> (error) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"error from convolution %ld"</span>, error);</div><div class="line">    &#125;</div><div class="line">&gt;</div><div class="line">    <span class="comment">//    NSLog(@"字节组成部分：%zu",CGImageGetBitsPerComponent(img));</span></div><div class="line">    <span class="comment">//颜色空间DeviceRGB</span></div><div class="line">    <span class="built_in">CGColorSpaceRef</span> colorSpace = <span class="built_in">CGColorSpaceCreateDeviceRGB</span>();</div><div class="line">&gt;</div><div class="line">    <span class="comment">//用图片创建上下文,CGImageGetBitsPerComponent(img),7,8</span></div><div class="line">    <span class="built_in">CGContextRef</span> ctx = <span class="built_in">CGBitmapContextCreate</span>(</div><div class="line">                                             outBuffer.data,</div><div class="line">                                             outBuffer.width,</div><div class="line">                                             outBuffer.height,</div><div class="line">                                             <span class="number">8</span>,</div><div class="line">                                             outBuffer.rowBytes,</div><div class="line">                                             colorSpace,</div><div class="line">                                             <span class="built_in">CGImageGetBitmapInfo</span>(image.CGImage));</div><div class="line">&gt;</div><div class="line">    <span class="comment">//根据上下文，处理过的图片，重新组件</span></div><div class="line">    <span class="built_in">CGImageRef</span> imageRef = <span class="built_in">CGBitmapContextCreateImage</span> (ctx);</div><div class="line">    <span class="built_in">UIImage</span> *returnImage = [<span class="built_in">UIImage</span> imageWithCGImage:imageRef];</div><div class="line">&gt;</div><div class="line">    <span class="comment">//clean up</span></div><div class="line">    <span class="built_in">CGContextRelease</span>(ctx);</div><div class="line">    <span class="built_in">CGColorSpaceRelease</span>(colorSpace);</div><div class="line">    free(pixelBuffer);</div><div class="line">    free(pixelBuffer2);</div><div class="line">    <span class="built_in">CFRelease</span>(inBitmapData);</div><div class="line">    <span class="built_in">CGImageRelease</span>(imageRef);</div><div class="line">&gt;</div><div class="line">    <span class="keyword">return</span> returnImage;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>图片压缩</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">用法：<span class="built_in">UIImage</span> *yourImage= [<span class="keyword">self</span> imageWithImageSimple:image scaledToSize:<span class="built_in">CGSizeMake</span>(<span class="number">210.0</span>, <span class="number">210.0</span>)];</div><div class="line"><span class="comment">//压缩图片</span></div><div class="line">- (<span class="built_in">UIImage</span>*)imageWithImageSimple:(<span class="built_in">UIImage</span>*)image scaledToSize:(<span class="built_in">CGSize</span>)newSize</div><div class="line">&#123;</div><div class="line"><span class="comment">// Create a graphics image context</span></div><div class="line"><span class="built_in">UIGraphicsBeginImageContext</span>(newSize);</div><div class="line"><span class="comment">// Tell the old image to draw in this newcontext, with the desired</span></div><div class="line"><span class="comment">// new size</span></div><div class="line">[image drawInRect:<span class="built_in">CGRectMake</span>(<span class="number">0</span>,<span class="number">0</span>,newSize.width,newSize.height)];</div><div class="line"><span class="comment">// Get the new image from the context</span></div><div class="line"><span class="built_in">UIImage</span>* newImage = <span class="built_in">UIGraphicsGetImageFromCurrentImageContext</span>();</div><div class="line"><span class="comment">// End the context</span></div><div class="line"><span class="built_in">UIGraphicsEndImageContext</span>();</div><div class="line"><span class="comment">// Return the new image.</span></div><div class="line"><span class="keyword">return</span> newImage;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>把时间戳转换为时间</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">+ (<span class="built_in">NSDate</span> *)dateWithTimeIntervalInMilliSecondSince1970:(<span class="keyword">double</span>)timeIntervalInMilliSecond &#123;</div><div class="line">	<span class="built_in">NSDate</span> *ret = <span class="literal">nil</span>;</div><div class="line">    <span class="keyword">double</span> timeInterval = timeIntervalInMilliSecond;</div><div class="line">    <span class="keyword">if</span>(timeIntervalInMilliSecond &gt; <span class="number">140000000000</span>) &#123;</div><div class="line">        timeInterval = timeIntervalInMilliSecond / <span class="number">1000</span>;</div><div class="line">    &#125;</div><div class="line">     ret = [<span class="built_in">NSDate</span> dateWithTimeIntervalSince1970:timeInterval];</div><div class="line">&gt;</div><div class="line">     <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>自定义cell中获取不到cell实际大小的办法</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt;-(<span class="keyword">void</span>)drawRect:(<span class="built_in">CGRect</span>)rect &#123;</div><div class="line">    <span class="comment">// 重写此方法，并在此方法中获取</span></div><div class="line">    <span class="built_in">CGFloat</span> width = <span class="keyword">self</span>.frame.size.width;</div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>长按图标抖动</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&gt;-(<span class="keyword">void</span>)longPress:(<span class="built_in">UILongPressGestureRecognizer</span>*)longPress</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> (longPress.state==<span class="built_in">UIGestureRecognizerStateBegan</span>) &#123;</div><div class="line">        <span class="built_in">CAKeyframeAnimation</span>* anim=[<span class="built_in">CAKeyframeAnimation</span> animation];</div><div class="line">        anim.keyPath=<span class="string">@"transform.rotation"</span>;</div><div class="line">        anim.values=@[@(angelToRandian(<span class="number">-7</span>)),@(angelToRandian(<span class="number">7</span>)),@(angelToRandian(<span class="number">-7</span>))];</div><div class="line">        anim.repeatCount=MAXFLOAT;</div><div class="line">        anim.duration=<span class="number">0.2</span>;</div><div class="line">        [<span class="keyword">self</span>.imageView.layer addAnimation:anim forKey:<span class="literal">nil</span>];</div><div class="line">        <span class="keyword">self</span>.btn.hidden=<span class="literal">NO</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>两种方法删除NSUserDefaults所有记录</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&gt;<span class="comment">//方法一</span></div><div class="line"><span class="built_in">NSString</span> *appDomain = [[<span class="built_in">NSBundle</span> mainBundle] bundleIdentifier];</div><div class="line">[[<span class="built_in">NSUserDefaults</span> standardUserDefaults] removePersistentDomainForName:appDomain];</div><div class="line">&gt;</div><div class="line"><span class="comment">//方法二</span></div><div class="line">- (<span class="keyword">void</span>)resetDefaults &#123;</div><div class="line">    <span class="built_in">NSUserDefaults</span> * defs = [<span class="built_in">NSUserDefaults</span> standardUserDefaults];</div><div class="line">    <span class="built_in">NSDictionary</span> * dict = [defs dictionaryRepresentation];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">id</span> key <span class="keyword">in</span> dict) &#123;</div><div class="line">        [defs removeObjectForKey:key];</div><div class="line">    &#125;</div><div class="line">    [defs synchronize];</div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>截屏全图</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&gt;- (<span class="built_in">UIImage</span> *)imageFromView: (<span class="built_in">UIView</span> *) theView&#123;</div><div class="line">  	<span class="built_in">UIGraphicsBeginImageContext</span>(theView.frame.size);</div><div class="line">    <span class="built_in">CGContextRef</span> context = <span class="built_in">UIGraphicsGetCurrentContext</span>();</div><div class="line">    [theView.layer renderInContext:context];</div><div class="line">    <span class="built_in">UIImage</span> *theImage = <span class="built_in">UIGraphicsGetImageFromCurrentImageContext</span>();</div><div class="line">    <span class="built_in">UIGraphicsEndImageContext</span>();</div><div class="line">&gt;</div><div class="line">    <span class="keyword">return</span> theImage;</div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>去除UIImageView锯齿</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;imageView.layer.shouldRasterize = <span class="literal">YES</span>;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>由身份证号码返回性别</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&gt;-(<span class="built_in">NSString</span> *)sexStrFromIdentityCard:(<span class="built_in">NSString</span> *)numberStr&#123;</div><div class="line">    <span class="built_in">NSString</span> *result = <span class="literal">nil</span>;</div><div class="line">    <span class="built_in">BOOL</span> isAllNumber = <span class="literal">YES</span>;</div><div class="line">&gt;</div><div class="line">    <span class="keyword">if</span>([numberStr length]&lt;<span class="number">17</span>)</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">&gt;    </div><div class="line">    <span class="comment">//**截取第17为性别识别符</span></div><div class="line">    <span class="built_in">NSString</span> *fontNumer = [numberStr substringWithRange:<span class="built_in">NSMakeRange</span>(<span class="number">16</span>, <span class="number">1</span>)];</div><div class="line">&gt;    </div><div class="line">    <span class="comment">//**检测是否是数字;</span></div><div class="line">    <span class="keyword">const</span> <span class="keyword">char</span> *str = [fontNumer UTF8String];</div><div class="line">    <span class="keyword">const</span> <span class="keyword">char</span> *p = str;</div><div class="line">    <span class="keyword">while</span> (*p!=<span class="string">'\0'</span>) &#123;</div><div class="line">        <span class="keyword">if</span>(!(*p&gt;=<span class="string">'0'</span>&amp;&amp;*p&lt;=<span class="string">'9'</span>))</div><div class="line">            isAllNumber = <span class="literal">NO</span>;</div><div class="line">        p++;</div><div class="line">    &#125;</div><div class="line">&gt;</div><div class="line">    <span class="keyword">if</span>(!isAllNumber)</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">&gt;</div><div class="line">    <span class="keyword">int</span> sexNumber = [fontNumer integerValue];</div><div class="line">    <span class="keyword">if</span>(sexNumber%<span class="number">2</span>==<span class="number">1</span>)</div><div class="line">        result = <span class="string">@"男"</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (sexNumber%<span class="number">2</span>==<span class="number">0</span>)</div><div class="line">        result = <span class="string">@"女"</span>;</div><div class="line">&gt;</div><div class="line">    <span class="keyword">return</span> result;  </div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>数组随机重新排列</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&gt;+ (<span class="built_in">NSArray</span> *)getRandomWithPosition:(<span class="built_in">NSInteger</span>)position positionContent:(<span class="keyword">id</span>)positionContent array:(<span class="built_in">NSArray</span> *)baseArray &#123;</div><div class="line">    <span class="built_in">NSMutableArray</span> *resultArray = [<span class="built_in">NSMutableArray</span> arrayWithCapacity:baseArray.count];</div><div class="line">    <span class="built_in">NSMutableArray</span> *tempBaseArray = [<span class="built_in">NSMutableArray</span> arrayWithArray:baseArray];</div><div class="line">&gt;</div><div class="line">    <span class="keyword">while</span> ([tempBaseArray count]) &#123;</div><div class="line">        <span class="built_in">NSInteger</span> range = [tempBaseArray count];</div><div class="line">        <span class="keyword">id</span> string = [tempBaseArray objectAtIndex:arc4random()%range];</div><div class="line">        [resultArray addObject:string];</div><div class="line">        [tempBaseArray removeObject:string];</div><div class="line">    &#125;</div><div class="line">&gt; </div><div class="line">    <span class="built_in">NSUInteger</span> index = [resultArray indexOfObject:positionContent];</div><div class="line">    [resultArray exchangeObjectAtIndex:index withObjectAtIndex:position - <span class="number">1</span>];</div><div class="line">&gt; </div><div class="line">    <span class="keyword">return</span> resultArray;</div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>利用陀螺仪实现更真实的微信摇一摇动画</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&gt;- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions</div><div class="line">&#123;    </div><div class="line">    application.applicationSupportsShakeToEdit=<span class="literal">YES</span>;</div><div class="line">&#125;</div><div class="line">&gt;</div><div class="line">-(<span class="keyword">void</span>)motionEnded:(<span class="built_in">UIEventSubtype</span>)motion withEvent:(<span class="built_in">UIEvent</span> *)event &#123;</div><div class="line">    <span class="keyword">if</span>(motion==<span class="built_in">UIEventSubtypeMotionShake</span>) &#123;</div><div class="line">         <span class="comment">// 真实一点的摇动动画</span></div><div class="line">        [<span class="keyword">self</span> addAnimations];</div><div class="line">         <span class="comment">// 播放声音</span></div><div class="line">        AudioServicesPlaySystemSound (soundID); </div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">&gt;</div><div class="line">- (<span class="keyword">void</span>)addAnimations &#123;</div><div class="line">    <span class="built_in">CABasicAnimation</span> *translation = [<span class="built_in">CABasicAnimation</span> animationWithKeyPath:<span class="string">@"transform"</span>];</div><div class="line">    translation.timingFunction = [<span class="built_in">CAMediaTimingFunction</span> functionWithName:kCAMediaTimingFunctionEaseInEaseOut];</div><div class="line">    translation.toValue=[<span class="built_in">NSValue</span> valueWithCATransform3D:<span class="built_in">CATransform3DMakeRotation</span>(-M_PI_4, <span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>)];</div><div class="line">    translation.duration = <span class="number">0.2</span>;</div><div class="line">    translation.repeatCount = <span class="number">2</span>;</div><div class="line">    translation.autoreverses = <span class="literal">YES</span>;</div><div class="line">&gt;</div><div class="line">    [shake.layer addAnimation:translation forKey:<span class="string">@"translation"</span>];</div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>在后台播放音乐</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&gt;<span class="comment">//1. 在Info.plist中，添加"Required background modes"键，其值设置是“App plays audio" </span></div><div class="line"><span class="comment">//2. 在播放器播放音乐的代码所在处，添加如下两段代码（当然，前提是已经添加了AVFoundation框架）</span></div><div class="line">&gt;</div><div class="line"><span class="comment">//添加后台播放代码：</span></div><div class="line"><span class="built_in">AVAudioSession</span> *session = [<span class="built_in">AVAudioSession</span> sharedInstance];    </div><div class="line">[session setActive:<span class="literal">YES</span> error:<span class="literal">nil</span>];    </div><div class="line">[session setCategory:<span class="built_in">AVAudioSessionCategoryPlayback</span> error:<span class="literal">nil</span>];   </div><div class="line">&gt; </div><div class="line"><span class="comment">//以及设置app支持接受远程控制事件代码。设置app支持接受远程控制事件，</span></div><div class="line"><span class="comment">//其实就是在dock中可以显示应用程序图标，同时点击该图片时，打开app。</span></div><div class="line"><span class="comment">//或者锁屏时，双击home键，屏幕上方出现应用程序播放控制按钮。</span></div><div class="line">[[<span class="built_in">UIApplication</span> sharedApplication] beginReceivingRemoteControlEvents]; </div><div class="line">&gt;</div><div class="line"><span class="comment">//用下列代码播放音乐，测试后台播放</span></div><div class="line"><span class="comment">// 创建播放器  </span></div><div class="line"><span class="built_in">AVAudioPlayer</span> *player = [[<span class="built_in">AVAudioPlayer</span> alloc] initWithContentsOfURL:url error:<span class="literal">nil</span>];    </div><div class="line">[player prepareToPlay];  </div><div class="line">[player setVolume:<span class="number">1</span>];  </div><div class="line">player.numberOfLoops = <span class="number">-1</span>; <span class="comment">//设置音乐播放次数  -1为一直循环  </span></div><div class="line">[player play]; <span class="comment">//播放</span></div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>利用富文本改变字体颜色</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&gt;- (<span class="built_in">NSMutableAttributedString</span> *)changeTextColor:(<span class="built_in">NSString</span> *)text needChange:(<span class="built_in">NSString</span> *)value <span class="built_in">UIColor</span>:(<span class="built_in">UIColor</span> *)color&#123;</div><div class="line">&gt;</div><div class="line">    <span class="built_in">NSMutableAttributedString</span> *attrstring = [[<span class="built_in">NSMutableAttributedString</span> alloc] initWithString:text];</div><div class="line">&gt;</div><div class="line">    <span class="comment">//1.设置字体颜色</span></div><div class="line">    [attrstring addAttribute:<span class="built_in">NSForegroundColorAttributeName</span></div><div class="line">                       value:color</div><div class="line">                       range:[text rangeOfString:value]];</div><div class="line">&gt;</div><div class="line">    <span class="keyword">return</span> attrstring;</div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>计算两个日期之间的天数</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&gt;- (<span class="built_in">NSInteger</span>)calcDaysFromBegin:(<span class="built_in">NSDate</span> *)beginDate end:(<span class="built_in">NSDate</span> *)endDate&#123;</div><div class="line">    <span class="comment">//创建日期格式化对象</span></div><div class="line">    <span class="built_in">NSDateFormatter</span> *dateFormatter = [[<span class="built_in">NSDateFormatter</span> alloc] init];</div><div class="line">    [dateFormatter setDateFormat:<span class="string">@"yyyy-MM-dd HH:mm"</span>];</div><div class="line">&gt;</div><div class="line">    <span class="comment">//取两个日期对象的时间间隔：</span></div><div class="line">    <span class="comment">//这里的NSTimeInterval 并不是对象，是基本型，其实是double类型，是由c定义的:typedef double NSTimeInterval;</span></div><div class="line">    <span class="built_in">NSTimeInterval</span> time = [endDate timeIntervalSinceDate:beginDate];</div><div class="line">&gt;</div><div class="line">    <span class="keyword">int</span> days = ((<span class="keyword">int</span>)time) / (<span class="number">3600</span>*<span class="number">24</span>);</div><div class="line">    <span class="comment">//int hours=((int)time)%(3600*24)/3600;</span></div><div class="line">    <span class="comment">//NSString *dateContent=[[NSString alloc] initWithFormat:@"%i天%i小时",days,hours];</span></div><div class="line">    <span class="keyword">return</span> days;</div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>获取上个月或者下个月 +1是下个月 -1是上个月</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&gt;- (<span class="built_in">NSDate</span> *)getPriousorLaterDateFromDate:(<span class="built_in">NSDate</span> *)date withMonth:(<span class="keyword">int</span>)month&#123;</div><div class="line">&gt;    </div><div class="line">    <span class="built_in">NSDateComponents</span> *comps = [[<span class="built_in">NSDateComponents</span> alloc] init];</div><div class="line">&gt;    </div><div class="line">    [comps setMonth:month];</div><div class="line">&gt;   </div><div class="line">    <span class="built_in">NSCalendar</span> *calender = [[<span class="built_in">NSCalendar</span> alloc] initWithCalendarIdentifier:<span class="built_in">NSGregorianCalendar</span>];</div><div class="line">&gt;  </div><div class="line">    <span class="built_in">NSDate</span> *mDate = [calender dateByAddingComponents:comps toDate:date options:<span class="number">0</span>];</div><div class="line">&gt;   </div><div class="line">    <span class="keyword">return</span> mDate;</div><div class="line">&gt;  </div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>两个时间比较</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&gt;- (<span class="keyword">int</span>)compareOneDay:(<span class="built_in">NSDate</span> *)oneDay withAnotherDay:(<span class="built_in">NSDate</span> *)anotherDay&#123;</div><div class="line">&gt;</div><div class="line">    <span class="built_in">NSDateFormatter</span> *dateFormatter = [[<span class="built_in">NSDateFormatter</span> alloc] init];</div><div class="line">    [dateFormatter setDateFormat:<span class="string">@"yyyy/MM/dd"</span>];</div><div class="line">    <span class="built_in">NSString</span> *oneDayStr = [dateFormatter stringFromDate:oneDay];</div><div class="line">    <span class="built_in">NSString</span> *anotherDayStr = [dateFormatter stringFromDate:anotherDay];</div><div class="line">    <span class="built_in">NSDate</span> *dateA = [dateFormatter dateFromString:oneDayStr];</div><div class="line">    <span class="built_in">NSDate</span> *dateB = [dateFormatter dateFromString:anotherDayStr];</div><div class="line">    <span class="built_in">NSComparisonResult</span> result = [dateA compare:dateB];</div><div class="line">    <span class="comment">//    NSLog(@"date1 : %@, date2 : %@", oneDay, anotherDay);</span></div><div class="line">    <span class="keyword">if</span> (result == <span class="built_in">NSOrderedDescending</span>) &#123;</div><div class="line">        <span class="comment">//NSLog(@"Date1  is in the future");</span></div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (result == <span class="built_in">NSOrderedAscending</span>)&#123;</div><div class="line">        <span class="comment">//NSLog(@"Date1 is in the past");</span></div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//NSLog(@"Both dates are the same");</span></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&gt;  </div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>Date 转 String</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSString</span> *)stringFromDate:(<span class="built_in">NSDate</span> *)date&#123;</div><div class="line">&gt;</div><div class="line">    <span class="built_in">NSDateFormatter</span> *dateFormatter = [[<span class="built_in">NSDateFormatter</span> alloc] init];</div><div class="line">&gt;   </div><div class="line">    [dateFormatter setDateFormat:<span class="string">@"yyyy/MM/dd"</span>];</div><div class="line">&gt;   </div><div class="line">    <span class="built_in">NSString</span> *destDateString = [dateFormatter stringFromDate:date];</div><div class="line">&gt;   </div><div class="line">    <span class="keyword">return</span> destDateString;</div><div class="line">&gt;   </div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>String 转Date</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&gt;- (<span class="built_in">NSDate</span> *)dateFromString:(<span class="built_in">NSString</span> *)dateString&#123;</div><div class="line">&gt;</div><div class="line">    <span class="built_in">NSDateFormatter</span> *dateFormatter = [[<span class="built_in">NSDateFormatter</span> alloc] init];</div><div class="line">&gt;   </div><div class="line">    [dateFormatter setDateFormat: <span class="string">@"yyyy/MM/dd"</span>];</div><div class="line">&gt;   </div><div class="line">    <span class="built_in">NSDate</span> *destDate= [dateFormatter dateFromString:dateString];</div><div class="line">&gt;   </div><div class="line">    <span class="keyword">return</span> destDate;</div><div class="line">&gt;   </div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>浮点转百分比</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSString</span> *)percentage:(<span class="built_in">NSString</span> *)value&#123;</div><div class="line">&gt;</div><div class="line">    <span class="keyword">float</span> _percent = [value floatValue];</div><div class="line">&gt;   </div><div class="line">    <span class="built_in">CFLocaleRef</span> currentLocale = <span class="built_in">CFLocaleCopyCurrent</span>();</div><div class="line">&gt;   </div><div class="line">    <span class="built_in">CFNumberFormatterRef</span> numberFormatter = <span class="built_in">CFNumberFormatterCreate</span>(<span class="literal">NULL</span>, currentLocale, kCFNumberFormatterPercentStyle);</div><div class="line">&gt;   </div><div class="line">    <span class="built_in">CFNumberRef</span> number = <span class="built_in">CFNumberCreate</span>(<span class="literal">NULL</span>, kCFNumberFloatType, &amp;_percent);</div><div class="line">&gt;   </div><div class="line">    <span class="built_in">CFStringRef</span> numberString = <span class="built_in">CFNumberFormatterCreateStringWithNumber</span>(<span class="literal">NULL</span>, numberFormatter, number);</div><div class="line">&gt;   </div><div class="line">    <span class="keyword">return</span> (__bridge <span class="built_in">NSString</span> * _Nullable)(numberString);</div><div class="line">&gt;   </div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>获取当月第一天跟最后一天</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSString</span> *)getMonthBeginAndEndWith:(<span class="built_in">NSString</span> *)dateStr&#123;</div><div class="line">&gt;</div><div class="line">    <span class="built_in">NSDateFormatter</span> *format=[[<span class="built_in">NSDateFormatter</span> alloc] init];</div><div class="line">    [format setDateFormat:<span class="string">@"yyyy/MM/dd"</span>];</div><div class="line">    <span class="built_in">NSDate</span> *newDate=[format dateFromString:dateStr];</div><div class="line">    <span class="keyword">double</span> interval = <span class="number">0</span>;</div><div class="line">    <span class="built_in">NSDate</span> *beginDate = <span class="literal">nil</span>;</div><div class="line">    <span class="built_in">NSDate</span> *endDate = <span class="literal">nil</span>;</div><div class="line">    <span class="built_in">NSCalendar</span> *calendar = [<span class="built_in">NSCalendar</span> currentCalendar];</div><div class="line">&gt;</div><div class="line">    [calendar setFirstWeekday:<span class="number">2</span>];<span class="comment">//设定周一为周首日</span></div><div class="line">    <span class="built_in">BOOL</span> ok = [calendar rangeOfUnit:<span class="built_in">NSMonthCalendarUnit</span> startDate:&amp;beginDate interval:&amp;interval forDate:newDate];</div><div class="line">    <span class="comment">//分别修改为 NSDayCalendarUnit NSWeekCalendarUnit NSYearCalendarUnit</span></div><div class="line">    <span class="keyword">if</span> (ok) &#123;</div><div class="line">        endDate = [beginDate dateByAddingTimeInterval:interval<span class="number">-1</span>];</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">@""</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">NSDateFormatter</span> *myDateFormatter = [[<span class="built_in">NSDateFormatter</span> alloc] init];</div><div class="line">    [myDateFormatter setDateFormat:<span class="string">@"YYYY/MM/dd"</span>];</div><div class="line">    <span class="comment">//月初</span></div><div class="line">    <span class="built_in">NSString</span> *beginString = [myDateFormatter stringFromDate:beginDate];</div><div class="line">    <span class="comment">//月末</span></div><div class="line">    <span class="built_in">NSString</span> *endString = [myDateFormatter stringFromDate:endDate];</div><div class="line">    <span class="built_in">NSString</span> *s = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%@-%@"</span>,beginString,endString];</div><div class="line">    <span class="keyword">return</span> s;</div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>UIColor HEX</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">&gt;+ (<span class="built_in">UIColor</span> *)colorWithHexString:(<span class="built_in">NSString</span> *)color alpha:(<span class="built_in">CGFloat</span>)alpha&#123;</div><div class="line">    <span class="comment">//删除字符串中的空格</span></div><div class="line">    <span class="built_in">NSString</span> *cString = [[color stringByTrimmingCharactersInSet:[<span class="built_in">NSCharacterSet</span> whitespaceAndNewlineCharacterSet]] uppercaseString];</div><div class="line">    <span class="comment">// String should be 6 or 8 characters</span></div><div class="line">    <span class="keyword">if</span> ([cString length] &lt; <span class="number">6</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> [<span class="built_in">UIColor</span> clearColor];</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// strip 0X if it appears</span></div><div class="line">    <span class="comment">//如果是0x开头的，那么截取字符串，字符串从索引为2的位置开始，一直到末尾</span></div><div class="line">    <span class="keyword">if</span> ([cString hasPrefix:<span class="string">@"0X"</span>])</div><div class="line">    &#123;</div><div class="line">        cString = [cString substringFromIndex:<span class="number">2</span>];</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//如果是#开头的，那么截取字符串，字符串从索引为1的位置开始，一直到末尾</span></div><div class="line">    <span class="keyword">if</span> ([cString hasPrefix:<span class="string">@"#"</span>])</div><div class="line">    &#123;</div><div class="line">        cString = [cString substringFromIndex:<span class="number">1</span>];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> ([cString length] != <span class="number">6</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> [<span class="built_in">UIColor</span> clearColor];</div><div class="line">    &#125;</div><div class="line">&gt;</div><div class="line">    <span class="comment">// Separate into r, g, b substrings</span></div><div class="line">    <span class="built_in">NSRange</span> range;</div><div class="line">    range.location = <span class="number">0</span>;</div><div class="line">    range.length = <span class="number">2</span>;</div><div class="line">    <span class="comment">//r</span></div><div class="line">    <span class="built_in">NSString</span> *rString = [cString substringWithRange:range];</div><div class="line">    <span class="comment">//g</span></div><div class="line">    range.location = <span class="number">2</span>;</div><div class="line">    <span class="built_in">NSString</span> *gString = [cString substringWithRange:range];</div><div class="line">    <span class="comment">//b</span></div><div class="line">    range.location = <span class="number">4</span>;</div><div class="line">    <span class="built_in">NSString</span> *bString = [cString substringWithRange:range];</div><div class="line">&gt;</div><div class="line">    <span class="comment">// Scan values</span></div><div class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> r, g, b;</div><div class="line">    [[<span class="built_in">NSScanner</span> scannerWithString:rString] scanHexInt:&amp;r];</div><div class="line">    [[<span class="built_in">NSScanner</span> scannerWithString:gString] scanHexInt:&amp;g];</div><div class="line">    [[<span class="built_in">NSScanner</span> scannerWithString:bString] scanHexInt:&amp;b];</div><div class="line">    <span class="keyword">return</span> [<span class="built_in">UIColor</span> colorWithRed:((<span class="keyword">float</span>)r / <span class="number">255.0</span>f) green:((<span class="keyword">float</span>)g / <span class="number">255.0</span>f) blue:((<span class="keyword">float</span>)b / <span class="number">255.0</span>f) alpha:alpha];</div><div class="line">&#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>###Objective-C 内存管理</p>
+<ol>
+<li>一个对象可以有一个或多个拥有者</li>
+<li>当它一个拥有者都没有的时候，它就会被回收</li>
+<li>如果想保留一个对象不被回收，你就必须成为它的拥有者</li>
+</ol>
+<p>###关键字</p>
+<ol>
+<li>alloc 为对象分配内存，计数设为1，并返回此对象。</li>
+<li>copy 复制一个对象，此对象计数为1，返回此对象。你将成为此克隆对象的拥有者。</li>
+<li>retain 对象计数+1，并成为次对象的拥有者。</li>
+<li>release 对象计数-1，并丢掉此对象。</li>
+<li>autorelease 在未来的</li>
+<li>某一个时刻，对象计数-1。并在未来的某个时间放弃此对象。</li>
+</ol>
+<p>###原则</p>
+<ol>
+<li>一个代码块内要确保copy，alloc 和 retain 的使用数量与 release 和 autorelease 的数量相等。</li>
+<li>在使用以 alloc 或 new 开头或包含 copy 的方法，或 retain 一个对象时，你将会编程它的拥有者。<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
+<li>实现 dealloc 方法，这是系统当 retain -&gt; 0 的时候，自动调用的。手动调用会引起 retain count 计数错误（多一次的 release）。</li>
+</ol>
+<p>###tableView性能优化</p>
+<p>####cell的循环利用方式1<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">UITableViewCell</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</div><div class="line">&#123;</div><div class="line">    <span class="keyword">static</span> <span class="built_in">NSString</span> *ID = <span class="string">@"cell"</span>;</div><div class="line">    <span class="built_in">UITableViewCell</span> *cell = [tableView dequeueReusableCellWithIdentifier:ID];</div><div class="line">    <span class="keyword">if</span> (cell == <span class="literal">nil</span>) &#123;</div><div class="line">        cell = [[<span class="built_in">UITableViewCell</span> alloc] initWithStyle:<span class="built_in">UITableViewCellStyleValue1</span> reuseIdentifier:ID];</div><div class="line">    &#125;</div><div class="line">    cell.textLabel.text = <span class="string">@""</span>;</div><div class="line">    <span class="keyword">return</span> cell;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>####cell的循环利用方式2-注册<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">static</span> <span class="built_in">NSString</span> *ID = <span class="string">@"cell"</span>;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line">    <span class="comment">// Do any additional setup after loading the view, typically from a nib.</span></div><div class="line"></div><div class="line"></div><div class="line">    <span class="keyword">self</span>.tableview.dataSource = <span class="keyword">self</span>;</div><div class="line">    <span class="keyword">self</span>.tableview.delegate = <span class="keyword">self</span>;</div><div class="line">    [<span class="keyword">self</span>.tableview registerClass:[<span class="built_in">UITableViewCell</span> <span class="keyword">class</span>] forCellReuseIdentifier:<span class="string">@"cell"</span>];</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="built_in">UITableViewCell</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</div><div class="line">&#123;</div><div class="line"></div><div class="line">    <span class="built_in">UITableViewCell</span> *cell = [tableView dequeueReusableCellWithIdentifier:ID];</div><div class="line">    cell.textLabel.text = <span class="string">@""</span>;</div><div class="line">    <span class="keyword">return</span> cell;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>###自定义cell</p>
+<p>####等高cell<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">-(<span class="built_in">CGFloat</span>)tableView:(<span class="built_in">UITableView</span> *)tableView heightForRowAtIndexPath:(<span class="built_in">NSIndexPath</span>)indexPath</div><div class="line">&#123;</div><div class="line">      MuziCell *cell = [MuziCell cellWithTableView:tableView];</div><div class="line">      cell.status = <span class="keyword">self</span>.statues[indexPath.row];    <span class="comment">// 将数据传进cell</span></div><div class="line">      [cell layoutIfNeeded];</div><div class="line">      <span class="keyword">return</span> cell.height;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>####非等高cell<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">UITableViewCell</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</div><div class="line">&#123;</div><div class="line"></div><div class="line">    MuziCell *cell = [MuziCell cellWithTableView:tableView];</div><div class="line">    cell.status = <span class="keyword">self</span>.statues[indexPath.row];    <span class="comment">// 将数据传进cell</span></div><div class="line">    [cell layoutIfNeeded];</div><div class="line">    <span class="keyword">self</span>.heights[@(indexPath.row)]  = @(cell.height); <span class="comment">// 字典里面是对象</span></div><div class="line">    <span class="keyword">return</span> cell;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 返回估计高度,非常重要，调节cellforRow和heightForRow的调用方法</span></div><div class="line">- (<span class="built_in">CGFloat</span>)tableView:(<span class="built_in">UITableView</span> *)tableView estimatedHeightForRowAtIndexPath:(<span class="built_in">NSIndexPath</span>)indexPath</div><div class="line">&#123;</div><div class="line">      <span class="keyword">return</span> <span class="number">200</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="built_in">CGFloat</span>)tableView:(<span class="built_in">UITableView</span> *)tableView heightForRowAtIndexPath:(<span class="built_in">NSIndexPath</span>)indexPath</div><div class="line">&#123;</div><div class="line">    <span class="comment">// 将上面的高度存起来，拿到这里使用      </span></div><div class="line">    <span class="keyword">return</span> [<span class="keyword">self</span>.heights[@(indexPath.row)] doubleValue];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>###设置UITableView分割线距左边的间距<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">-(<span class="keyword">void</span>)viewDidLoad&#123;</div><div class="line"></div><div class="line">[<span class="keyword">super</span> viewDidLoad];</div><div class="line"></div><div class="line">[<span class="keyword">self</span>.tableView setSeparatorInset:<span class="built_in">UIEdgeInsetsZero</span>];</div><div class="line">[<span class="keyword">self</span>.tableView setLayoutMargins:<span class="built_in">UIEdgeInsetsZero</span>];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>####在cell将要显示出来的方法中执行下面的代码<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">-(<span class="keyword">void</span>)tableView:(<span class="built_in">UITableView</span> )tableView willDisplayCell:(<span class="built_in">UITableViewCell</span> )cell forRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</div><div class="line">&#123;</div><div class="line">	[cell setSeparatorInset:<span class="built_in">UIEdgeInsetsZero</span>];</div><div class="line">	[cell setLayoutMargins:<span class="built_in">UIEdgeInsetsZero</span>];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>###iOS隐藏导航栏正确做法</p>
+<p>#####以往我们隐藏导航栏都是这样做：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)viewWillAppear:(<span class="built_in">BOOL</span>)animated &#123;</div><div class="line">    [<span class="keyword">super</span> viewWillAppear:animated];</div><div class="line">   [<span class="keyword">self</span>.navigationController setNavigationBarHidden:<span class="literal">YES</span> animated:<span class="literal">YES</span>];</div><div class="line">&#125;</div><div class="line">-(<span class="keyword">void</span>)viewWillDisappear:(<span class="built_in">BOOL</span>)animated&#123;</div><div class="line">    [<span class="keyword">super</span> viewWillDisappear:animated];</div><div class="line">    [<span class="keyword">self</span>.navigationController setNavigationBarHidden:<span class="literal">NO</span> animated:<span class="literal">YES</span>];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>#####但是往往这样 会遇到一些奇怪的 bug ，想来想去 我想到这样做可能要更好一点:<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)viewWillAppear:(<span class="built_in">BOOL</span>)animated &#123;</div><div class="line">    [<span class="keyword">super</span> viewWillAppear:animated];</div><div class="line">    [<span class="keyword">self</span>.navigationController.view sendSubviewToBack:<span class="keyword">self</span>.navigationController.navigationBar];</div><div class="line">&#125;</div><div class="line"></div><div class="line">-(<span class="keyword">void</span>)viewWillDisappear:(<span class="built_in">BOOL</span>)animated&#123;</div><div class="line">    [<span class="keyword">super</span> viewWillDisappear:animated];</div><div class="line">    [<span class="keyword">self</span>.navigationController.view bringSubviewToFront:<span class="keyword">self</span>.navigationController.navigationBar];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">GETAGGT IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/iOS/">iOS</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/08/29/hello-world/" data-tooltip="Hello World">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-weibo"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/08/30/iOS-Skill/&amp;title=iOS-Skill">
+                    <i class="fa fa-qq"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-star"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2017 Tracy. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/08/29/hello-world/" data-tooltip="Hello World">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-weibo"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/08/30/iOS-Skill/&amp;title=iOS-Skill">
+                    <i class="fa fa-qq"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-star"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-facebook-official"></i><span>Teilen auf Facebook</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-twitter"></i><span>Teilen auf Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-google-plus"></i><span>Teilen auf Google Plus</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-weibo"></i><span>Share on Weibo</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/08/30/iOS-Skill/&amp;title=iOS-Skill">
+                    <i class="fa fa-qq"></i><span>Share on QQ</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2017/08/30/iOS-Skill/">
+                    <i class="fa fa-star"></i><span>Share on Qzone</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/WechatIMG1.jpeg" alt="Bild des Autors"/>
+        
+            <h4 id="about-card-name">Tracy</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                湖南省长沙市雨花区
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    />
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">keinen Beitrag gefunden</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://yoursite.com/2017/08/29/hello-world/">
+                            <h3 class="media-heading">Hello World</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Aug 29, 2017
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://yoursite.com/2017/08/30/iOS-Skill/">
+                            <h3 class="media-heading">iOS-Skill</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Aug 30, 2017
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>#####iOS开发过程中一些小问题小技巧，代码片段。</p>
+<blockquote>
+<p>利用Safari打开一个链接</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://baidu.com"</span>];</div><div class="line">[[<span class="built_in">UIApplication</span> sharedApplication] openURL:url];</div></pre></td></tr></table></figure>
+</blockquote></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="keinen Beitrag gefunden"
+                data-message-one="1 Beitrag gefunden"
+                data-message-other="{n} Einträge gefunden">
+                2 Einträge gefunden
+            </p>
+        </div>
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-ivwiy10zeb8fifc4swnhkwneuk64y53w2scmdmtp8thi9cqfxh31aowtroaz.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+
+
+    </body>
+</html>
