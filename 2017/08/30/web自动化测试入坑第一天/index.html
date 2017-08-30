@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>web自动化测试入坑第一天 | Tracy&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Python,自动化测试">
+    <meta name="description" content="#####1.为什么要做自动化测试？ 软件测试是保障和提高软件质量的重要手段。软件开发者和使用者必须对软件进行充分的测试，以确保其正常工作。在典型的软件开发项目中，软件测试工作量往往占开发总工作量的40%以上。因此提高软件测试过程的效率至关重要。为了提高测试效率，越来越多的测试工作引入了自动化测试的思想和方法。实践证明，软件自动化测试技术提高了软件测试的速度和效率，节省了软件测试成本，缩短了产品发">
+<meta name="keywords" content="Python,自动化测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web自动化测试入坑第一天">
+<meta property="og:url" content="http://yoursite.com/2017/08/30/web自动化测试入坑第一天/index.html">
+<meta property="og:site_name" content="Tracy&#39;s Blog">
+<meta property="og:description" content="#####1.为什么要做自动化测试？ 软件测试是保障和提高软件质量的重要手段。软件开发者和使用者必须对软件进行充分的测试，以确保其正常工作。在典型的软件开发项目中，软件测试工作量往往占开发总工作量的40%以上。因此提高软件测试过程的效率至关重要。为了提高测试效率，越来越多的测试工作引入了自动化测试的思想和方法。实践证明，软件自动化测试技术提高了软件测试的速度和效率，节省了软件测试成本，缩短了产品发">
+<meta property="og:updated_time" content="2017-08-30T09:25:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="web自动化测试入坑第一天">
+<meta name="twitter:description" content="#####1.为什么要做自动化测试？ 软件测试是保障和提高软件质量的重要手段。软件开发者和使用者必须对软件进行充分的测试，以确保其正常工作。在典型的软件开发项目中，软件测试工作量往往占开发总工作量的40%以上。因此提高软件测试过程的效率至关重要。为了提高测试效率，越来越多的测试工作引入了自动化测试的思想和方法。实践证明，软件自动化测试技术提高了软件测试的速度和效率，节省了软件测试成本，缩短了产品发">
+    
+        <link rel="alternate" type="application/atom+xml" title="Tracy&#39;s Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="https://tracyyanghandsome.github.io/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/WechatIMG1.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Tracy</h5>
+          <a href="mailto:2224202043@qq.com" title="2224202043@qq.com" class="mail">2224202043@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/all-tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/all-categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/TracyYanghandsome" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/2188048564/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">web自动化测试入坑第一天</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">web自动化测试入坑第一天</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-08-30T09:23:39.000Z" itemprop="datePublished" class="page-time">
+  2017-08-30
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+<article id="post-web自动化测试入坑第一天"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">web自动化测试入坑第一天</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-08-30 17:23:39" datetime="2017-08-30T09:23:39.000Z"  itemprop="datePublished">2017-08-30</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>#####1.为什么要做自动化测试？</p>
+<p>软件测试是保障和提高软件质量的重要手段。软件开发者和使用者必须对软件进行充分的测试，以确保其正常工作。在典型的软件开发项目中，软件测试工作量往往占开发总工作量的40%以上。因此提高软件测试过程的效率至关重要。<br>为了提高测试效率，越来越多的测试工作引入了自动化测试的思想和方法。实践证明，软件自动化测试技术提高了软件测试的速度和效率，节省了软件测试成本，缩短了产品发布周期。同时，自动化测试技术也完成了许多手工测试无法实现的工作。所以采用自动化测试方法和相应的测试框架成为了软件开发组织测试工作的重要支撑手段。</p>
+<p>#####2.什么项目适合做自动化测试？<br>首先考考虑产品是否适合做自动化测试。这方法比较普遍的共识是从三个方面进行权衡。</p>
+<ol>
+<li>软件需求变动不频繁<br>测试脚本的稳定性决定了自动化测试的维护成本。如果软件需求变动过于频繁，测试人员需要根据变动的需求来更新测试用例以及相关的测试脚本，而脚本的维护本身就是一个代码开发的过程，需要修改、调试，必要的时候还要修改自动化测试的框架，如果所花费的成本不低于利用其节省的测试成本，那么自动化测试便是失败的。项目中的某些模块相对稳定，而某些模块需求变动性很大。我们便可对相对稳定的模块进行自动化测试，而变动较大的仍是用手工测试。</li>
+<li>项目周期较长<br>由于自动化测试需求的确定、自动化测试框架的设计、测试脚本的编写与调试均需要相当长的时间来完成。这样的过程本身就是一个测试软件的开发过程，需要较长的时间来完成。如果项目的周期比较短，没有足够的时间去支持这样一个过程，那么自动化测试便成为笑谈</li>
+<li>自动化测试脚本可重复使用<br>自动化测试脚本的重复使用要从三个方面来考量，一方面所测试的项目之间是否很大的差异性(如C/S系统和B/S系统的差异);所选择的测试工具是否适应这种差异；最后，测试人员是否有能力开发出适应这种差异的自动化测试框架。<br>#####好了废话不多说，让我们开始动手吧~~<br>######环境搭建<br>系统环境：macOS Sierra 10.12.5<br>语言：python2.7(可使用Java)<br>使用的框架：selenium2.0<br>#####如何使用selenium进行自动化测试<br>1.首先要熟悉selenium API ，API就是selenium 所定义一方法，用于定位，操作页面上的各种元素，这里就不详说了。selenium API文档地址传送门—&gt;<a href="http://selenium-python-zh.readthedocs.io/en/latest/waits.html" target="_blank" rel="external">http://selenium-python-zh.readthedocs.io/en/latest/waits.html</a><br>2.使用Xpath定位传送门 –&gt;<a href="http://www.runoob.com/xpath/xpath-syntax.html" target="_blank" rel="external">http://www.runoob.com/xpath/xpath-syntax.html</a><br>######学习完以上，你可以游刃有余的模拟手工测试来操作页面上的各种元素了。接着你需要做的就是把这些“用例”组织起来，统一来跑就行了。<br>######Example for BaiduSearch:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">from selenium import webdriver</div><div class="line"></div><div class="line">#定义一个全局变量driver</div><div class="line">driver = webdriver.Chrome(); #这里我使用的谷歌浏览器。支持IE，Safari，Firefox</div><div class="line">driver.get(&apos;https://www.baidu.com/&apos;) #开启浏览器并跳转到Url</div><div class="line">driver.find_element_by_id(&quot;kw&quot;).clear() #在输入之前清空下文本框里的内容</div><div class="line">driver.find_element_by_id(&quot;kw&quot;).send_keys(&apos;selenium&apos;) #填充文本框文本</div><div class="line">driver.find_element_by_id(&quot;submit&quot;).click()   #点击搜索按钮</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这就完成了一个简单的自动化百度搜索了😂，下一篇会介绍如何做一个自动化测试登录。太久没用Markdown了，请无视排版。。。新人第一次写技术文章，请多多指教😄，欢迎大神们一起探讨~~</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-08-30T09:25:25.000Z" itemprop="dateUpdated">2017-08-30 17:25:25</time>
+</span><br>
+
+
+        
+        请大神们多多指教😊
+        
+    </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/WechatIMG1.jpg" alt="Tracy">
+            Tracy
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自动化测试/">自动化测试</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://tracyyanghandsome.github.io&title=《web自动化测试入坑第一天》 — Tracy's Blog&pic=http://yoursite.com/img/WechatIMG1.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://tracyyanghandsome.github.io&title=《web自动化测试入坑第一天》 — Tracy's Blog&source=welcome to Tracy's Blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://tracyyanghandsome.github.io" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《web自动化测试入坑第一天》 — Tracy's Blog&url=https://tracyyanghandsome.github.io&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://tracyyanghandsome.github.io" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/08/30/iOS-Skill/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">iOS-Skill</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢各位大爷小姐~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <!--<div class="top">-->
+        <!--
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>-->
+    <!--</div>-->
+    <div class="bottom">
+        <p><span>Tracy &copy; 2015 - 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://tracyyanghandsome.github.io&title=《web自动化测试入坑第一天》 — Tracy's Blog&pic=http://yoursite.com/img/WechatIMG1.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://tracyyanghandsome.github.io&title=《web自动化测试入坑第一天》 — Tracy's Blog&source=welcome to Tracy's Blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://tracyyanghandsome.github.io" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《web自动化测试入坑第一天》 — Tracy's Blog&url=https://tracyyanghandsome.github.io&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://tracyyanghandsome.github.io" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABvUlEQVR42u3ay2rEMAwF0Pn/n06hq5Yy5kqKnaEcr4ZMcE6yENbj9YrX9b3W168fa7LnDQsXF3fMvZYr3/rvPe/2Sa6/fXlcXNyD3F6QWr9GlRsFO1xc3A/jVs8b6xfGxcX9H9z5C/R2w8XFfYrbe8A6MK0PRttzNVxc3AG3Wtzc8XtjfRcXF7fIvYprHYx2PPHXU3BxcY9w1y2QXqGkiq6mQ7i4uE9xewMWN7RJgsQJFxf3KW6y0aT1Uk2KRkccXFzcFjcJQ5Pm6F0NGFxc3DPcvGmRDGbl36ZZfMHFxT3OrbY/83JG9Z4o1uLi4m7m5gMT86NM9WPh4uKe5/YGL/KRrPwY1Gyr4OLibuDmj0zC1uQAFIVIXFzc49xqmaPaCJnEV1xc3JPcaqKSl056wS5Kh3BxcTdzr3hNyqn5VBUuLu7ncKvjm5N7qsVQXFzcp7jVcHZv66XQPsHFxT3C7fUuq63T/HCT/4uLi7ubm6c9Cai3Dy4u7mdy7xq8mCROUTEFFxf3w7g7cpMkLEanLVxc3Ee5vXZIrwOMi4v7LDffqNpSnYxzjXI1XFzc4wXTZLu84TpJq3BxcW/lfgGFXi7lXdufAQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

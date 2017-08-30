@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-30T02:20:07.000Z</updated>
+  <updated>2017-08-30T09:25:25.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>web自动化测试入坑第一天</title>
+    <link href="http://yoursite.com/2017/08/30/web%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%85%A5%E5%9D%91%E7%AC%AC%E4%B8%80%E5%A4%A9/"/>
+    <id>http://yoursite.com/2017/08/30/web自动化测试入坑第一天/</id>
+    <published>2017-08-30T09:23:39.000Z</published>
+    <updated>2017-08-30T09:25:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>#####1.为什么要做自动化测试？</p>
+<p>软件测试是保障和提高软件质量的重要手段。软件开发者和使用者必须对软件进行充分的测试，以确保其正常工作。在典型的软件开发项目中，软件测试工作量往往占开发总工作量的40%以上。因此提高软件测试过程的效率至关重要。<br>为了提高测试效率，越来越多的测试工作引入了自动化测试的思想和方法。实践证明，软件自动化测试技术提高了软件测试的速度和效率，节省了软件测试成本，缩短了产品发布周期。同时，自动化测试技术也完成了许多手工测试无法实现的工作。所以采用自动化测试方法和相应的测试框架成为了软件开发组织测试工作的重要支撑手段。</p>
+<p>#####2.什么项目适合做自动化测试？<br>首先考考虑产品是否适合做自动化测试。这方法比较普遍的共识是从三个方面进行权衡。</p>
+<ol>
+<li>软件需求变动不频繁<br>测试脚本的稳定性决定了自动化测试的维护成本。如果软件需求变动过于频繁，测试人员需要根据变动的需求来更新测试用例以及相关的测试脚本，而脚本的维护本身就是一个代码开发的过程，需要修改、调试，必要的时候还要修改自动化测试的框架，如果所花费的成本不低于利用其节省的测试成本，那么自动化测试便是失败的。项目中的某些模块相对稳定，而某些模块需求变动性很大。我们便可对相对稳定的模块进行自动化测试，而变动较大的仍是用手工测试。</li>
+<li>项目周期较长<br>由于自动化测试需求的确定、自动化测试框架的设计、测试脚本的编写与调试均需要相当长的时间来完成。这样的过程本身就是一个测试软件的开发过程，需要较长的时间来完成。如果项目的周期比较短，没有足够的时间去支持这样一个过程，那么自动化测试便成为笑谈</li>
+<li>自动化测试脚本可重复使用<br>自动化测试脚本的重复使用要从三个方面来考量，一方面所测试的项目之间是否很大的差异性(如C/S系统和B/S系统的差异);所选择的测试工具是否适应这种差异；最后，测试人员是否有能力开发出适应这种差异的自动化测试框架。<br>#####好了废话不多说，让我们开始动手吧~~<br>######环境搭建<br>系统环境：macOS Sierra 10.12.5<br>语言：python2.7(可使用Java)<br>使用的框架：selenium2.0<br>#####如何使用selenium进行自动化测试<br>1.首先要熟悉selenium API ，API就是selenium 所定义一方法，用于定位，操作页面上的各种元素，这里就不详说了。selenium API文档地址传送门—&gt;<a href="http://selenium-python-zh.readthedocs.io/en/latest/waits.html" target="_blank" rel="external">http://selenium-python-zh.readthedocs.io/en/latest/waits.html</a><br>2.使用Xpath定位传送门 –&gt;<a href="http://www.runoob.com/xpath/xpath-syntax.html" target="_blank" rel="external">http://www.runoob.com/xpath/xpath-syntax.html</a><br>######学习完以上，你可以游刃有余的模拟手工测试来操作页面上的各种元素了。接着你需要做的就是把这些“用例”组织起来，统一来跑就行了。<br>######Example for BaiduSearch:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">from selenium import webdriver</div><div class="line"></div><div class="line">#定义一个全局变量driver</div><div class="line">driver = webdriver.Chrome(); #这里我使用的谷歌浏览器。支持IE，Safari，Firefox</div><div class="line">driver.get(&apos;https://www.baidu.com/&apos;) #开启浏览器并跳转到Url</div><div class="line">driver.find_element_by_id(&quot;kw&quot;).clear() #在输入之前清空下文本框里的内容</div><div class="line">driver.find_element_by_id(&quot;kw&quot;).send_keys(&apos;selenium&apos;) #填充文本框文本</div><div class="line">driver.find_element_by_id(&quot;submit&quot;).click()   #点击搜索按钮</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这就完成了一个简单的自动化百度搜索了😂，下一篇会介绍如何做一个自动化测试登录。太久没用Markdown了，请无视排版。。。新人第一次写技术文章，请多多指教😄，欢迎大神们一起探讨~~</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#####1.为什么要做自动化测试？&lt;/p&gt;
+&lt;p&gt;软件测试是保障和提高软件质量的重要手段。软件开发者和使用者必须对软件进行充分的测试，以确保其正常工作。在典型的软件开发项目中，软件测试工作量往往占开发总工作量的40%以上。因此提高软件测试过程的效率至关重要。&lt;br&gt;为了提
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+      <category term="自动化测试" scheme="http://yoursite.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS-Skill</title>
