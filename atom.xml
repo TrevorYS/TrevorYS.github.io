@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-30T09:25:25.000Z</updated>
+  <updated>2017-08-31T02:49:21.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>web自动化测试入坑第二天</title>
+    <link href="http://yoursite.com/2017/08/31/web%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%85%A5%E5%9D%91%E7%AC%AC%E4%BA%8C%E5%A4%A9/"/>
+    <id>http://yoursite.com/2017/08/31/web自动化测试入坑第二天/</id>
+    <published>2017-08-31T02:41:17.000Z</published>
+    <updated>2017-08-31T02:49:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>看完上一篇文章，传送门—&gt;<a href="http://www.jianshu.com/p/1c57ba4b8740。我想大家都应该对自动化测试有个基本了解了，接下来写个自动测试登录吧~~" target="_blank" rel="external">http://www.jianshu.com/p/1c57ba4b8740。我想大家都应该对自动化测试有个基本了解了，接下来写个自动测试登录吧~~</a><br>在写登录之前，我们先来了解一下一个登录流程是什么样的。这里简单的画了一下流程图<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/2026783-136a3522717ac2b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="登录流程.png" title="">
+                </div>
+                <div class="image-caption">登录流程.png</div>
+            </figure><br>了解完整个流程之后，我们先不忙于去怎么用代码实现，因为在实现自动登录的时候我们会遇到一个问题，就是验证码这块应该怎么去解决。</p>
+<p>#####如何解决在登录时验证码的问题<br>1.绕过验证码进行登录，跟后端商量测试的时候把验证码验证关闭就好了😂，这是最简单的方法也是比较好用的方法了~<br>2.识别验证码。这里我用的pytesseract做的验证码识别，具体看下面代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">from selenium import webdriver</div><div class="line">import os,time,sys</div><div class="line">from PIL import Image</div><div class="line">from pytesseract import *</div><div class="line"></div><div class="line">driver = webdriver.Chrome()</div><div class="line"></div><div class="line">def getAuthCode(ulr):</div><div class="line">    driver.get(ulr);</div><div class="line">    time.sleep(0.5);</div><div class="line">    driver.save_screenshot(&quot;captcha.jpg&quot;)  # 截屏，并保存图片</div><div class="line">    cleanImage(&quot;captcha.jpg&quot;)</div><div class="line">    im = Image.open(&apos;captcha1.jpg&apos;)</div><div class="line">    code = pytesseract.image_to_string(im)</div><div class="line">    if len(code) == 4:</div><div class="line">        return code</div><div class="line">    else:</div><div class="line">        return False</div><div class="line"></div><div class="line">def cleanImage(imagePath):</div><div class="line">    image = Image.open(imagePath); #打开图片</div><div class="line">    print image.format, image.size, image.mode</div><div class="line">    box = (1000, 665, 1100, 695) #谷歌浏览器解析自带黑色背景,裁剪出验证码</div><div class="line">    region = image.crop(box)</div><div class="line">    region.convert(&apos;RGB&apos;).save(&apos;/Users/mac/Desktop/captcha1.jpg&apos;)</div></pre></td></tr></table></figure></p>
+<p>这里的思路是先找到验证码的地址，然后截图保存图片，再打开图片进行裁剪，再利用pytesseract进行识别。</p>
+<p>######这种方式基本上能识别简单的验证码，稍微复杂点的就不行了，而且正确率不是特别高，由于时间问题，我这里并没有针对图片识别进行更多的投入，只是花了点时间在Google跟Baidu上搜了下资料，然后跟朋友探讨了下，pytesseract已经过时了，如果真的想做图片识别的话，可以研究下CNN，利用卷积神经网络搞的，等有时间的时候我会去研究下，研究完后会专门写一篇关于图像识别的文章，这里就不多提了。(有兴趣的朋友可以一起交流~)</p>
+<h2 id="所以最终我选的方式是跟后端商量，在测试的时候把验证码关闭了😂。好了，进入今天的正题"><a href="#所以最终我选的方式是跟后端商量，在测试的时候把验证码关闭了😂。好了，进入今天的正题" class="headerlink" title="######所以最终我选的方式是跟后端商量，在测试的时候把验证码关闭了😂。好了，进入今天的正题~"></a>######所以最终我选的方式是跟后端商量，在测试的时候把验证码关闭了😂。好了，进入今天的正题~</h2><p>首先看下我要做测试的登录页：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/2026783-6b76bf2881182d33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="登录页面.png" title="">
+                </div>
+                <div class="image-caption">登录页面.png</div>
+            </figure><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">from selenium import webdriver #导入webdriver</div><div class="line"></div><div class="line">#定义一个全局变量driver</div><div class="line">driver = webdriver.Chrome();  </div><div class="line">#定义一个全局登录页url</div><div class="line">loginPage = &quot;http://xxxxxx/Login.aspx&quot;</div><div class="line">#定义一个登录方法并传入描述，账户，密码</div><div class="line">def testLogin(des, userName,password,):</div><div class="line">    print des,&apos;用户名:&apos;,userName,&apos;密码:&apos;,password;</div><div class="line">    driver.get(loginPage) #开启浏览器并跳转到Url</div><div class="line">    driver.find_element_by_id(&quot;username&quot;).clear() #在输入用户名之前清空下文本框里的内容</div><div class="line">    driver.find_element_by_id(&quot;username&quot;).send_keys(userName) #填充用户名文本框文本</div><div class="line">    driver.find_element_by_id(&quot;pwd&quot;).clear()</div><div class="line">    driver.find_element_by_id(&quot;pwd&quot;).send_keys(password) </div><div class="line">    driver.find_element_by_id(&quot;loginbtn&quot;).click()   #点击登录按钮</div><div class="line">    #这里如果不加try except的话，正常登录会crash，因为正常登录是不弹窗的，只有在登录失败的时候，才会弹窗提示。</div><div class="line">    try:</div><div class="line">       if driver.switch_to_alert():#拦截弹窗</div><div class="line">                driver.switch_to_alert().accept();   #关闭弹窗并确认</div><div class="line">        	    driver.find_element_by_id(&quot;username&quot;).clear()  #清空用户名</div><div class="line">       	        driver.find_element_by_id(&quot;pwd&quot;).clear()  #清空密码</div><div class="line">        	    print driver.switch_to_alert().text  #打印弹窗内容</div><div class="line">      except Exception,e:</div><div class="line">                 print e</div><div class="line"></div><div class="line">if __name__ ==&apos;__main__&apos;:</div><div class="line">    testLogin(&apos;测试未输入用户名&apos;, &apos;&apos;, &apos;&apos;)</div><div class="line">    testLogin(&apos;测试未输入密码&apos;, &apos;qd_test_001&apos;, &apos;&apos;)</div><div class="line">    testLogin(&apos;测试帐户不存在&apos;, &apos;21121&apos;, &apos;xxxxxxx&apos;)</div><div class="line">    testLogin(&apos;测试成功登录&apos;, &apos;sa&apos;, &apos;123456&apos;)</div><div class="line"></div><div class="line">-------------------------------打印结果------------------------</div><div class="line">测试未输入用户名 用户名:  密码: </div><div class="line">测试未输入密码 用户名: qd_test_001 密码: </div><div class="line">测试帐户不存在 用户名: 21121 密码: xxxxxxx</div><div class="line">测试成功登录 用户名: sa 密码: 123456</div></pre></td></tr></table></figure></p>
+<p>######这样就完成了所有登录的自动化测试了,自从有了自动化测试再也不用做一些枯燥乏味的事情了，而且测试时间比以前大大提升了很多!下一篇讲下如何加入测试用例并生成报告。欢迎广大的python爱好者一起交流~ 新手上路第二天，请多多指教😁😁😁。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;看完上一篇文章，传送门—&amp;gt;&lt;a href=&quot;http://www.jianshu.com/p/1c57ba4b8740。我想大家都应该对自动化测试有个基本了解了，接下来写个自动测试登录吧~~&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http:/
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+      <category term="自动化测试" scheme="http://yoursite.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>web自动化测试入坑第一天</title>
     <link href="http://yoursite.com/2017/08/30/web%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%85%A5%E5%9D%91%E7%AC%AC%E4%B8%80%E5%A4%A9/"/>
     <id>http://yoursite.com/2017/08/30/web自动化测试入坑第一天/</id>
     <published>2017-08-30T09:23:39.000Z</published>
-    <updated>2017-08-30T09:25:25.000Z</updated>
+    <updated>2017-08-30T09:27:22.000Z</updated>
     
     <content type="html"><![CDATA[<p>#####1.为什么要做自动化测试？</p>
 <p>软件测试是保障和提高软件质量的重要手段。软件开发者和使用者必须对软件进行充分的测试，以确保其正常工作。在典型的软件开发项目中，软件测试工作量往往占开发总工作量的40%以上。因此提高软件测试过程的效率至关重要。<br>为了提高测试效率，越来越多的测试工作引入了自动化测试的思想和方法。实践证明，软件自动化测试技术提高了软件测试的速度和效率，节省了软件测试成本，缩短了产品发布周期。同时，自动化测试技术也完成了许多手工测试无法实现的工作。所以采用自动化测试方法和相应的测试框架成为了软件开发组织测试工作的重要支撑手段。</p>
