@@ -212,6 +212,39 @@
   </entry>
   
   <entry>
+    <title>Mac安装多个Python版本</title>
+    <link href="http://yoursite.com/2017/08/30/Mac%E5%AE%89%E8%A3%85%E5%A4%9A%E4%B8%AAPython%E7%89%88%E6%9C%AC/"/>
+    <id>http://yoursite.com/2017/08/30/Mac安装多个Python版本/</id>
+    <published>2017-08-30T01:52:58.000Z</published>
+    <updated>2018-01-29T08:36:40.596Z</updated>
+    
+    <content type="html"><![CDATA[<p>######安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install pyenv</div></pre></td></tr></table></figure></p>
+<p>######使用<br>```</p>
+<p>#查看当前安装的版本<br>pyenv versions</p>
+<p>#查看当前使用的版本<br>pyenv version</p>
+<p>#安装python3.4.2版本<br>pyenv install -v 3.4.2</p>
+<p>#卸载python3.4.2版本<br>pyenv uninstall 3.4.2</p>
+<p>#设置全局的python版本<br>pyenv global 3.4.2</p>
+<p>#设置面向程序的本地版本<br>pyenv local 3.4.2</p>
+<p>#设置面向shell的python版本<br>pyenv shell 3.5.0</p>
+<p>#使当前设置生效<br>exec $SHELL</p>
+<p>#unset参数可以用于取消当前shell设定的版本<br>pyenv shell –unset</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;######安装&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://yoursite.com/2017/08/29/hello-world/"/>
     <id>http://yoursite.com/2017/08/29/hello-world/</id>
