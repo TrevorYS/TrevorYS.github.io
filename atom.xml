@@ -75,6 +75,44 @@
   </entry>
   
   <entry>
+    <title>Pip常用命令</title>
+    <link href="http://yoursite.com/2017/09/03/Pip%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2017/09/03/Pip常用命令/</id>
+    <published>2017-09-03T00:22:18.000Z</published>
+    <updated>2018-02-05T07:44:10.024Z</updated>
+    
+    <content type="html"><![CDATA[<p>#####列出已安装的包<br><figure class="highlight plain"><figcaption><span>list``` or ```pip freeze```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#####导出requirements.txt</div></pre></td></tr></table></figure></p>
+<p>pip freeze &gt; &lt;目录&gt;/requirements.txt<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#####安装包</div><div class="line">######在线安装</div><div class="line">```pip install &lt;包名&gt;``` or ```pip install -r requirements.txt</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># 安装1.9版本的django</div><div class="line">pip install django==1.9</div><div class="line"># 安装版本号大于1.9的django，注意有引号</div><div class="line">pip install &quot;django&gt;1.9&quot;</div><div class="line">pip install &quot;django&gt;=1.9&quot;</div><div class="line">pip install &quot;django&lt;1.9&quot;</div><div class="line">pip install &quot;django&lt;=1.9&quot;</div><div class="line">pip install &quot;django&gt;&lt;1.9&quot;</div></pre></td></tr></table></figure>
+<p>requirements.txt内容格式为:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">APScheduler==2.1.2</div><div class="line">Django==1.5.4</div><div class="line">MySQL-Connector-Python==2.0.1</div><div class="line">MySQL-python==1.2.3</div><div class="line">PIL==1.1.7</div><div class="line">South==1.0.2</div><div class="line">django-grappelli==2.6.3</div><div class="line">django-pagination==1.0.7</div></pre></td></tr></table></figure></p>
+<p>######安装本地安装包<br><figure class="highlight plain"><figcaption><span>install <目录>/<文件名>``` or ```pip install --use-wheel --no-index --find-links=wheelhouse/ <包名>```</包名></文件名></目录></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">可简写为:</div></pre></td></tr></table></figure></p>
+<p>pip install –no-index -f=&lt;目录&gt;/ &lt;包名&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">######卸载包</div><div class="line">```pip uninstall &lt;包名&gt;``` or ```pip uninstall -r requirements.txt</div></pre></td></tr></table></figure></p>
+<p>######升级包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install -U &lt;包名&gt;</div></pre></td></tr></table></figure></p>
+<p>######升级pip<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install -U pip</div></pre></td></tr></table></figure></p>
+<p>######显示包所在的目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip show -f &lt;包名&gt;</div></pre></td></tr></table></figure></p>
+<p>######搜索包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip search &lt;搜索关键字&gt;</div></pre></td></tr></table></figure></p>
+<p>######查询可升级的包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip list -o</div></pre></td></tr></table></figure></p>
+<p>######下载包而不安装<br><figure class="highlight plain"><figcaption><span>install <包名> -d <目录>``` or ```pip install -d <目录> -r requirements.txt```</目录></目录></包名></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">######打包</div></pre></td></tr></table></figure></p>
+<p>pip wheel &lt;包名&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#####更换国内pypi镜像</div><div class="line">#####国内pypi镜像</div><div class="line">豆瓣：[https://pypi.douban.com/simple](https://pypi.douban.com/simple)</div><div class="line">中国科学技术大学：[https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/](https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/)</div><div class="line">清华大学TUNA：[https://pypi.tuna.tsinghua.edu.cn/simple](https://pypi.tuna.tsinghua.edu.cn/simple)</div><div class="line"></div><div class="line">######指定单次安装源</div></pre></td></tr></table></figure></p>
+<p>pip install &lt;包名&gt; -i <a href="http://pypi.v2ex.com/simple" target="_blank" rel="external">http://pypi.v2ex.com/simple</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">######指定全局安装源</div><div class="line">在unix和macos，配置文件为：$HOME/.pip/pip.conf</div><div class="line">在windows上，配置文件为：%HOME%\pip\pip.ini</div></pre></td></tr></table></figure></p>
+<p>[global]<br>timeout = 6000<br>index-url = <a href="http://pypi.douban.com/simple" target="_blank" rel="external">http://pypi.douban.com/simple</a><br>```</p>
+<p>######参考资料<br><a href="https://pip.pypa.io/en/latest/" target="_blank" rel="external">pip documentation</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#####列出已安装的包&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;list``` or ```pip freeze```&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Mac" scheme="http://yoursite.com/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
     <title>web自动化测试入坑第二天</title>
     <link href="http://yoursite.com/2017/08/31/web%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%85%A5%E5%9D%91%E7%AC%AC%E4%BA%8C%E5%A4%A9/"/>
     <id>http://yoursite.com/2017/08/31/web自动化测试入坑第二天/</id>
