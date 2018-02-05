@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-31T02:49:21.000Z</updated>
+  <updated>2018-02-05T07:39:52.492Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,65 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>让Curl在Mac上支持HTTPS</title>
+    <link href="http://yoursite.com/2017/09/30/%E8%AE%A9Curl%E5%9C%A8Mac%E6%94%AF%E6%8C%81HTTPS/"/>
+    <id>http://yoursite.com/2017/09/30/让Curl在Mac支持HTTPS/</id>
+    <published>2017-09-30T00:52:58.000Z</published>
+    <updated>2018-02-05T07:39:52.492Z</updated>
+    
+    <content type="html"><![CDATA[<p>curl默认安装的话，是不支持https，当你在使用libcurl去访问https时，就会报以下的错误</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/2026783-40ab6b095966b84f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="EDBBC8D8-A1AB-4B35-A6AF-2A3D6896F6BF.png" title="">
+                </div>
+                <div class="image-caption">EDBBC8D8-A1AB-4B35-A6AF-2A3D6896F6BF.png</div>
+            </figure>
+<p>如果curl要支持https，就必须先安装openssl。因为Mac是自带openssl的。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/2026783-e3ab139ef5ff353e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="91C08D47-AC04-46A9-B7F3-BDB90A72864F.png" title="">
+                </div>
+                <div class="image-caption">91C08D47-AC04-46A9-B7F3-BDB90A72864F.png</div>
+            </figure>
+<p>所以我们只要cd到curl-7.56.1根目录下执行一下命令开启SSL:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure --with-darwinssl</div></pre></td></tr></table></figure></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/2026783-b2f7939074deaef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="9821D406-874A-4FDE-B44D-E5D76CB028A6.png" title="">
+                </div>
+                <div class="image-caption">9821D406-874A-4FDE-B44D-E5D76CB028A6.png</div>
+            </figure>
+<p>接下来会输出很多，这里我们不用管，看最后一条Message出现HTTPS就OK了。</p>
+<h2 id="Protocols-DICT-FILE-FTP-FTPS-GOPHER-HTTP-HTTPS-IMAP-IMAPS-LDAP-LDAPS-POP3-POP3S-RTSP-SMB-SMBS-SMTP-SMTPS-TELNET-TFTP"><a href="#Protocols-DICT-FILE-FTP-FTPS-GOPHER-HTTP-HTTPS-IMAP-IMAPS-LDAP-LDAPS-POP3-POP3S-RTSP-SMB-SMBS-SMTP-SMTPS-TELNET-TFTP" class="headerlink" title="######Protocols:        DICT FILE FTP FTPS GOPHER HTTP HTTPS IMAP IMAPS LDAP LDAPS POP3 POP3S RTSP SMB SMBS SMTP SMTPS TELNET TFTP"></a>######Protocols:        DICT FILE FTP FTPS GOPHER HTTP HTTPS IMAP IMAPS LDAP LDAPS POP3 POP3S RTSP SMB SMBS SMTP SMTPS TELNET TFTP</h2><p>然后重新执行:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo make install</div></pre></td></tr></table></figure></p>
+<p>检查是否成功:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/2026783-1bc32fd4d3af13ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="9CFE5928-64AF-483E-BF32-972C33208A91.png" title="">
+                </div>
+                <div class="image-caption">9CFE5928-64AF-483E-BF32-972C33208A91.png</div>
+            </figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;curl默认安装的话，是不支持https，当你在使用libcurl去访问https时，就会报以下的错误&lt;/p&gt;
+&lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+        
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Mac" scheme="http://yoursite.com/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>web自动化测试入坑第二天</title>
@@ -269,33 +328,6 @@
     
     
       <category term="Mac" scheme="http://yoursite.com/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/08/29/hello-world/"/>
-    <id>http://yoursite.com/2017/08/29/hello-world/</id>
-    <published>2017-08-29T06:34:53.000Z</published>
-    <updated>2017-08-30T02:21:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;
-    
-    </summary>
-    
     
   </entry>
   
