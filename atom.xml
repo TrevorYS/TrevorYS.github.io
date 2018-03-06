@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-06T06:14:03.346Z</updated>
+  <updated>2018-03-06T06:31:53.587Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Pip常用命令</title>
-    <link href="http://yoursite.com/2018/03/03/Widows%E5%AE%89%E8%A3%85Python/"/>
-    <id>http://yoursite.com/2018/03/03/Widows安装Python/</id>
-    <published>2018-03-03T00:22:18.000Z</published>
-    <updated>2018-03-06T06:14:03.346Z</updated>
+    <title>Windos安装Python</title>
+    <link href="http://yoursite.com/2018/03/05/Widows%E5%AE%89%E8%A3%85Python/"/>
+    <id>http://yoursite.com/2018/03/05/Widows安装Python/</id>
+    <published>2018-03-05T00:22:18.000Z</published>
+    <updated>2018-03-06T06:31:53.587Z</updated>
     
     <content type="html"><![CDATA[<p>####1.进入<a href="https://www.python.org/" target="_blank" rel="external">Python官方网站</a>下载安装包<br>点击导航栏的 Downloads 会自动识别你的windows系统  你会看到  Python3.6.2 和 Python2.7.13   <strong>（32位系统）</strong>的安装包</p>
 <h2 id="注-Python3以后版本不再向Python2进行兼容，所有如果你是单纯为了学新东西建议直接下载Python3以后的版本"><a href="#注-Python3以后版本不再向Python2进行兼容，所有如果你是单纯为了学新东西建议直接下载Python3以后的版本" class="headerlink" title="#####注: Python3以后版本不再向Python2进行兼容，所有如果你是单纯为了学新东西建议直接下载Python3以后的版本"></a>#####注: Python3以后版本不再向Python2进行兼容，所有如果你是单纯为了学新东西建议直接下载Python3以后的版本</h2><figure class="image-bubble">
