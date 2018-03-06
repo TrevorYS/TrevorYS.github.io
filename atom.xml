@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-05T07:39:52.492Z</updated>
+  <updated>2018-03-06T06:14:03.346Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pip常用命令</title>
+    <link href="http://yoursite.com/2018/03/03/Widows%E5%AE%89%E8%A3%85Python/"/>
+    <id>http://yoursite.com/2018/03/03/Widows安装Python/</id>
+    <published>2018-03-03T00:22:18.000Z</published>
+    <updated>2018-03-06T06:14:03.346Z</updated>
+    
+    <content type="html"><![CDATA[<p>####1.进入<a href="https://www.python.org/" target="_blank" rel="external">Python官方网站</a>下载安装包<br>点击导航栏的 Downloads 会自动识别你的windows系统  你会看到  Python3.6.2 和 Python2.7.13   <strong>（32位系统）</strong>的安装包</p>
+<h2 id="注-Python3以后版本不再向Python2进行兼容，所有如果你是单纯为了学新东西建议直接下载Python3以后的版本"><a href="#注-Python3以后版本不再向Python2进行兼容，所有如果你是单纯为了学新东西建议直接下载Python3以后的版本" class="headerlink" title="#####注: Python3以后版本不再向Python2进行兼容，所有如果你是单纯为了学新东西建议直接下载Python3以后的版本"></a>#####注: Python3以后版本不再向Python2进行兼容，所有如果你是单纯为了学新东西建议直接下载Python3以后的版本</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/2026783-771e792f0bec5475..png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>如果你是系统是windows64位或者你想下载其他版本的安装包—— 请点击Downloads  &gt; Windows   下载你需要的版本安装包</p>
+<p>#####注: 64位版本不可以安装在32位的系统上，但是32位版本可以安装在64位的系统上</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/2026783-06fcdf3aa2e13623..png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>####2.将Python安装到你的windows操作系统上<br>我安装的是64位系统的安装包,所以显示为   <figure class="highlight plain"><figcaption><span>Python3.6.2(64-bit)```,请根据windows系统需求进行安装</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#####这里以自定义安装为例注,请选中 :</div></pre></td></tr></table></figure></p>
+<p>Add Python 3.6 to Path<br><code>把Python添加到环境变量，这样以后在windows命令提示符下面也可以运行Python
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/2026783-fa74447d49edcedc..png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/2026783-26883f9daad33426..png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+选中</code>install for all users```安装目录会改变，请根据自己的需求修改安装路径   再点击 Install 进行下一步<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/2026783-14a9ca6b58ae2565..png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/2026783-ee4e0b8c247f23b7..png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="安装完成" title="">
+                </div>
+                <div class="image-caption">安装完成</div>
+            </figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;####1.进入&lt;a href=&quot;https://www.python.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Python官方网站&lt;/a&gt;下载安装包&lt;br&gt;点击导航栏的 Downloads 会自动识别你的windows系统  你会看到  
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Windows" scheme="http://yoursite.com/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>让Curl在Mac上支持HTTPS</title>
